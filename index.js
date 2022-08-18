@@ -1,30 +1,46 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
-const generateMd = require('./utils/generateMarkdown') //???//
+const fs = require("fs");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
-    {
-        type: 'input',
-        message: 'What is your name?',
-        name: 'name',
-    }
+  {
+    type: "input",
+    message: "What is your project titled?",
+    name: "title",
+  },
+  {
+      type: 'list',
+      message: 'What is your project titled?',
+      name: 'license',
+      choices: ['a', 'b', 'c', 'd']
+  }
+  // {
+  //     type: 'input',
+  //     message: 'What is your project titled?',
+  //     name: 'title',
+  // }
+  // {
+  //     type: 'input',
+  //     message: 'What is your project titled?',
+  //     name: 'title',
+  // }
 ];
 
-
-
 function writeToFile(fileName, data) {
-
-    //FS write file
-    fs.writeFile('index.html', html, (err) =>
-  err ? console.error(err) : console.log('Success!');
-)};
+  //FS write file
+  return fs.writeFileSync(fileName, data);
+}
 
 function init() {
-    //ask the user questions
-
-        //THEN I want to pass 'responses' to 'generateMarkdown' so we can get the 'markdown'
-
-        //THEN write the markdown to a file    
+  //ask the user questions
+  inquirer
+    .prompt(questions)
+    //THEN I want to pass 'responses' to 'generateMarkdown' so we can get the 'markdown'
+    .then((response) => {
+        console.log(response);
+      writeToFile("README.md", generateMarkdown(response));
+    });
+  //THEN write the markdown to a file
 }
 
 init();
