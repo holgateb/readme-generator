@@ -15,9 +15,29 @@ const questions = [
   },
   {
     type: "list",
-    message: "What is your project titled?",
+    message: "What license does your project need?",
     name: "license",
-    choices: ["a", "b", "c", "d"],
+    choices: ["Apache License", "MIT License", "GNU GPLv3", "None"],
+  },
+  {
+    type: "input",
+    message: "What are the steps for installation?",
+    name: "install",
+  },
+  {
+    type: "input",
+    message: "What is the usage of your application?",
+    name: "usage",
+  },
+  {
+    type: "input",
+    message: "How can you contribute?",
+    name: "contribute",
+  },
+  {
+    type: "input",
+    message: "Are there tests and if so, what commands can be used?",
+    name: "test",
   },
   {
     type: "input",
@@ -30,6 +50,8 @@ const questions = [
     name: "email",
   },
   ];
+
+//Installation, Usage, Contributing, and Tests
 
 function writeToFile(fileName, data) {
   //FS write file
