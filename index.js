@@ -17,7 +17,7 @@ const questions = [
     type: "list",
     message: "What license does your project need?",
     name: "license",
-    choices: ["Apache License", "MIT License", "GNU GPLv3", "None"],
+    choices: ["Apache", "MIT", "GNU-GPLv3", "None"],
   },
   {
     type: "input",

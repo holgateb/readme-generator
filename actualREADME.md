@@ -1,26 +1,25 @@
-# Project TItle
+# Readme Generator
 ## Description
 
-THis is a description of my project.
-
-![license](https://img.shields.io/badge/License-Apache-green.svg)
+this is a text based readme generator based on input from user.
+ 
 
 ## Table Of Contents
 
 * [Installation](#Installation)
 * [Usage](#Usage)
-* [license](#License)
+
 * [Contributing](#Contributing)
 * [Testing](#Testing)
 * [Questions](#Questions)
 
 ## Installation
 
-Clone it down 
+Clone it down and run node index.
 
 ## Usage
 
-Making readme Files
+none
 
 ## Contributing
 
@@ -32,7 +31,7 @@ none
 
 ## Questions?
 
-[Github](https://github.com/holgateb)
+[Github](holgateb)
 
-[Email](holgateb@hotmail.com)
+[Email](BHolgateFS@gmail.com)
 
